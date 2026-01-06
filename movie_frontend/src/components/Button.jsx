@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
  * @param {'button'|'submit'|'reset'} [props.type='button'] - Button type attribute.
  */
  // PUBLIC_INTERFACE
-const Button = ({
+const GlobalButton = ({
   label,
   onClick,
   variant = "primary",
@@ -119,7 +119,7 @@ const Button = ({
   return <button {...btnProps}>{label}</button>;
 };
 
-Button.propTypes = {
+GlobalButton.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   variant: PropTypes.oneOf([
@@ -135,7 +135,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(["button", "submit", "reset"]),
 };
 
-export default Button;
+export default GlobalButton;
 
 /**
  * Usage example:
